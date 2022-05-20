@@ -24,10 +24,12 @@ namespace ReactNativeInAppNotifications
             {
                 Flyout flyout = new Flyout
                 {
-                    Content = new TextBlock { Text = title }
+                    Content = new TextBlock { Text = title },
+
                 };
 
                 var control = XamlUIService.FromContext(_reactContext.Handle).ElementFromReactTag(tag) as FrameworkElement;
+                Button b = new Button();
 
                 flyout.ShowAt(control);
             });

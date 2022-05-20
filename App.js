@@ -29,6 +29,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import NotificationComponent from './components/NotificationComponent';
+import XamlNotificationComponent from './components/XamlNotificationComponent';
+import XamlNotificationWithRefComponent from './components/XamlNotificationWithRefComponent';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -57,10 +59,10 @@ const Section = ({children, title}): Node => {
 };
 
 const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === 'light';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: Colors.lighter,
   };
 
   return (
@@ -75,6 +77,8 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <NotificationComponent />
+          <XamlNotificationComponent />
+          <XamlNotificationWithRefComponent />
         </View>
       </ScrollView>
     </SafeAreaView>

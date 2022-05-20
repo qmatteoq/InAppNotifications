@@ -139,6 +139,9 @@
           "Microsoft.ReactNative.Managed": "1.0.0",
           "Microsoft.UI.Xaml": "2.7.0"
         }
+      },
+      "reactnativexaml": {
+        "type": "Project"
       }
     },
     "UAP,Version=v10.0.16299/win10-arm": {
